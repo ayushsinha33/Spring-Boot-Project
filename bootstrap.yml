@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: registration-service
+
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+
+    zookeeper:
+      connectString: localhost:2181
+
+
+  datasource:
+    url: ${database.url}
+    username: ${database.username}
+    password: ${database.password}
+
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+
+server:
+  port: 8000
